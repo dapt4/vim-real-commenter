@@ -48,7 +48,7 @@ function! GetCommentSyntax(filetype)
     return ['"']
   elseif a:filetype ==# 'bsh'
     return ['//']
-  elseif a:filetype ==# 'c' && a:filetype ==# 'java'
+  elseif a:filetype ==# 'c' || a:filetype ==# 'java'
     return ['//', '/\\*', '*/'] " '/\\*' for escape '/*'
   elseif a:filetype ==# 'jsp'
     return ['<%--','--%>']
