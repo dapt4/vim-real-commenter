@@ -201,10 +201,11 @@ function! CharacterRemove(start_char, end_char, isVisual)
   if !a:isVisual 
     let line = getline(line('.'))
     let start_col = match(line, start_char2)
+    let cursor_col = col('.')
     let end_col = a:end_char != '' ? match(line, a:end_char) : strlen(line)
     let len_s_char = len(start_char2)
     let len_e_char = len(a:end_char)
-    let first_slice = line[0: start_col - 1]
+    let first_slice = cursor_col == 1 ? '' : line[0: start_col - 1]
     let second_slice = line[start_col + len_s_char : end_col -1]
     let third_slice = line[end_col + len_s_char :]
     let concatenated_text = first_slice . second_slice . third_slice
@@ -237,10 +238,13 @@ endfunction
 function! CharacterAggregator(start_char, end_char, isVisual)  
   let start_char2 = a:start_char == '/\\*' ? '/*' : a:start_char
   if !a:isVisual 
-    normal! 0w
     let line = getline(line('.'))
+    normal! 0
+    if line[0:0] == ' ' 
+      normal! w
+    endif
     let cursor_pos = getpos('.')
-    let prev = line[0 : cursor_pos[2] - 2]
+    let prev = cursor_pos[2] == 1 ? '' : line[0 : cursor_pos[2] - 2]
     let post = line[cursor_pos[2] - 1:]
     let text_commented = prev . start_char2 . post . a:end_char
     call setline(line('.'), text_commented)
