@@ -1,0 +1,10 @@
+- works like the comments plugin of vscode
+- for use Just go to the desired line and use your mapped keys, you can make a visual select and it will work correctly
+
+example: 
+# index.js
+console.log('hi') -> //console.log('hi')
+
+- in visual mode:
+
+console.log('hi') -> /*console.log('hi')*/
