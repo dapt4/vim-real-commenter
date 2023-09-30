@@ -1,5 +1,6 @@
 # vim-real-commenter
 
+![muestra vim-real-commenter](https://github.com/dapt4/vim-real-commenter/assets/67972962/8086879d-aafa-499f-833d-5afcb050c528)
 
 ## Resume
 this is a plugin for vim and nevim, for add comments to the code depending of the file type. This plugin supports more than 75 languages
