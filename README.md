@@ -23,9 +23,9 @@ Or using a Plugin manager like:
 
 ## mappings
 this plugin must be mapped for works, it is recommended:\
-`noremap <C-_> :call SetComment(0)<CR>`\
-`vnoremap <C-_> :<c-u> call SetComment(1)<CR>`
+`noremap <C-7> :call SetComment(0)<CR>`\
+`vnoremap <C-7> :<c-u> call SetComment(1)<CR>`
 
 
 ## Usage
-Just go to the desired line and use your mapped keys, you can make a visual select and it will work correctly
+Just go to the desired line and use your mapped keys (in the example: ctrl + 7), you can make a visual select and it will work correctly
