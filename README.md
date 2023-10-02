@@ -22,9 +22,9 @@ Or using a Plugin manager like:
 :PlugInstall
 
 ## mappings
-this plugin must be mapped for works, it is recommended:
-`noremap <C-\_> :call SetComment(0)<CR>`\
-`vnoremap <C-\_> :<c-u> call SetComment(1)<CR>`
+this plugin must be mapped for works, it is recommended:\
+`noremap <C-_> :call SetComment(0)<CR>`\
+`vnoremap <C-_> :<c-u> call SetComment(1)<CR>`
 
 
 ## Usage
